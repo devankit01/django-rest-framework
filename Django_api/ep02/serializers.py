@@ -7,5 +7,5 @@ class StudentSerializer(serializers.Serializer):
     city = serializers.CharField(max_length = 20)
 
     # Create Function
-    def create(self, validate_data):
-        return Students.objects.create(**validate_data)
+    def create(self, validated_data):
+        return Students.objects.create(**validated_data)
